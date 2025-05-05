@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, rgb(43, 44, 44), #858686);
+    font-weight: 400;
+    height: 100vh;
+    display: grid;
+    place-content: center;
+	overflow: hidden;
+    user-select: none;
+}
+
+.vapi-container {
+    position: relative;
+    top: 70%;
+    left: 73%;
+    width: 500px;
+    height: 620px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    transform: translate(-50%, -50%) scale(1);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, .5);
+	background: transparent;
+    backdrop-filter: blur(5px);
+	box-shadow: 1px 1px 2px rgba(0,0,0,0.25),
+	    inset 1px 1px 2px rgba(255,255,255,0.25),
+	    inset -1px -1px 2px rgba(0,0,0,0.5);
+    margin: -80px;
+    padding-top: 20px;
+    transition: all 0.3s ease;
+}
+
+.vapi-container[data-theme="light"] {
+    color: #1a1a1a;
+}
+
+.vapi-container[data-theme="dark"] {
+    color: rgba(255, 255, 255, .9);
+}
+
+.vapi-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.vapi-logo {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+
+.vapi-container[data-theme="light"] .vapi-logo {
+    background: #d3d1d3;
+}
+
+.vapi-container[data-theme="dark"] .vapi-logo {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.vapi-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    -webkit-user-drag: none;
+    filter: invert(0);
+    transition: all 0.3s ease;
+}
+
+.vapi-container[data-theme="light"] .vapi-logo img {
+    filter: invert(1);
+}
+
+.vapi-title {
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+}
+
+.vapi-container[data-theme="light"] .vapi-title {
+    color: #ffffff;
+}
+
+.vapi-container[data-theme="dark"] .vapi-title {
+    color: rgba(0, 0, 0, 0.9);
+}
+
+.vapi-buttons {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.vapi-buttons button {
+    width: 120px;
+    height: 60px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.vapi-container[data-theme="light"] .vapi-buttons button {
+    background: rgba(1, 78, 92, 0.9);
+    color: #ffffff;
+}
+
+.vapi-container[data-theme="dark"] .vapi-buttons button {
+    background: rgba(3, 206, 241, 0.9);
+    color: #111111;
+}
+
+.vapi-buttons button:hover {
+    transform: translateY(-2px);
+}
+
+.vapi-container[data-theme="light"] .vapi-buttons button:hover {
+    background: #575757;
+}
+
+.vapi-container[data-theme="dark"] .vapi-buttons button:hover {
+    background: #bbbaba;
+}
+
+.vapi-buttons button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.vapi-logs {
+    position: relative;
+    width: 80%;
+    height: 200px;
+    overflow-x: hidden;
+    margin-top: 30px;
+    border-radius: 5px;
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+
+.vapi-container[data-theme="light"] .vapi-logs {
+    background: rgba(0, 0, 0, .1);
+}
+
+.vapi-container[data-theme="dark"] .vapi-logs {
+    background: rgba(255, 255, 255, .1);
+}
+
+.vapi-text-logs {
+    position: relative;
+    padding-left: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+}
+
+.vapi-container[data-theme="light"] .vapi-text-logs {
+    color: #1a1a1a;
+}
+
+.vapi-container[data-theme="dark"] .vapi-text-logs {
+    color: rgba(255, 255, 255, .9);
+}
+
+@media screen and (max-width: 768px) {
+    .vapi-container {
+        transform: translate(-50%, -50%) scale(.7);
+    }
+}
